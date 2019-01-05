@@ -18,7 +18,7 @@
 
 
 #section0  {
-  background: url('src/background3.jpg') no-repeat center center fixed;
+  background: url('src/background5.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -62,10 +62,6 @@ font-style:normal;
 font-size: 100px;
 }
 
-#blurb {
-font-size:15px;
-}
-
 /* Section 0 Text fade in */
 
 #menu, #title, #profileImg {
@@ -101,6 +97,14 @@ font-size:15px;
     -o-animation: 6s ease 0s normal forwards 1 fadein; /* Opera */
 }
 
+.flip-card {
+
+    animation: 7s ease 0s normal forwards 1 fadein;
+    -moz-animation: 7s ease 0s normal forwards 1 fadein; /* Firefox */
+    -webkit-animation: 7s ease 0s normal forwards 1 fadein; /* Safari and Chrome */
+    -o-animation: 7s ease 0s normal forwards 1 fadein; /* Opera */
+}
+
 @keyframes fadein{
     0% { opacity:0; }
     66% { opacity:0; }
@@ -128,7 +132,8 @@ font-size:15px;
   width: 160px;
   height: 25px;
   perspective: 1000px;
-  position:relative;
+  position:absolute;
+  bottom:0;
 }
 
 .flip-card-inner {
@@ -150,17 +155,22 @@ font-size:15px;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  color: #4F4E4E;
+  font-family: 'Alegreya Sans SC';
 }
 
 .flip-card-front {
-  color: DimGrey;
   z-index: 2;
 }
 
 .flip-card-back {
-  color: white;
   transform: rotateY(180deg);
   z-index: 1;
+  color: #4F4E4E;
+}
+
+#artLink {
+ color:#4F4E4E;
 }
 
 
