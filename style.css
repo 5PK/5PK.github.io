@@ -6,17 +6,30 @@
     font-style: normal;
 
 }
+.introMsg {
+font-family: 'quicksandlight';
+color: whitesmoke;
+ 
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+ 
+}
 
 #title {
-font-family: 'quicksandlight';
 font-weight:normal;
 font-style:normal;
 font-size: 100px;
-color: whitesmoke;
+}
+
+p.introMsg {
+font-size: 30px;
+}
+
+#blurb {
+font-size:15px;
 }
 
 #section0  {
-  background: url('src/background.jpg') no-repeat center center fixed;
+  background: url('src/background-blur1.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -35,7 +48,8 @@ color: whitesmoke;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-  padding: 5px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 1px;
 }
 
