@@ -1,3 +1,41 @@
-#section0  {
-  background-image: url('src/Killbear.JPG');
+@font-face {
+    font-family: 'quicksandlight';
+    src: url('src/fonts/quicksand-light-webfont.woff2') format('woff2'),
+         url('src/fonts/quicksand-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
+
+#title {
+font-family: 'quicksandlight';
+font-weight:normal;
+font-style:normal;
+font-size: 100px;
+color: whitesmoke;
+}
+
+#section0  {
+  background: url('src/background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+#profileImg {
+
+  background: whitesmoke;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  padding: 5px;
+}
+

@@ -8,7 +8,7 @@
 	<meta name="description" content="My Personal Website" />
 	<meta name="keywords"  content="fullpage,jquery" />
 	<meta name="Resource-type" content="Document" />
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="src/fullpage.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
@@ -16,8 +16,7 @@
 
 <div id="fullpage">
 	<div class="section active" id="section0">
-		<h1>Kevin Tran</h1>
-		<p>Hello and welcome to my portfolio. Feel free to scroll around and learn some more about me, my experiences and the things I love to do.</p>
+	 <h1 id="title">ktran.info</h1>
 	</div>
 	<div class="section" id="section1"><h1>Work Experience</h1></div>
 	<div class="section" id="section2">
@@ -26,15 +25,19 @@
 	    <div class="slide"><h1>AutoManage</h1></div>
 	</div>
 	<div class="section" id="section3"><h1>Education / Hobbies</h1></div>
+	
+	<div class="section" id="section4"><h1>How did I make this?</h1></div>
 </div>
-
 
 
 <script type="text/javascript" src="src/fullpage.js"></script>
 <script type="text/javascript">
 	var myFullpage = new fullpage('#fullpage', {
-		sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
+		sectionsColor: ['#A5DEE5', '#E0F9B5', '#FEFDCA', '#FFD3B6', '#FFCFDF']
 	});
 </script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
