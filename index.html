@@ -9,10 +9,21 @@
 	<meta name="keywords"  content="fullpage,jquery" />
 	<meta name="Resource-type" content="Document" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
 	<link rel="stylesheet" type="text/css" href="src/fullpage.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
+
+
+<ul id="menu">
+	<li data-menuanchor="p1"><a href="#p1">HOME</a></li>
+	<li data-menuanchor="p2"><a href="#p2">WORK</a></li>
+	<li data-menuanchor="p3"><a href="#p3">PROJECTS</a></li>
+	<li data-menuanchor="p4"><a href="#p5">ABOUT ME</a></li>
+	<li data-menuanchor="p5"><a href="#p5">HOW IT'S MADE</a></li>
+
+</ul>
 
 <div id="fullpage">
 	<div class="section active" id="section0">
@@ -24,7 +35,6 @@
 	 <br>
 	 <br>
 	 <p id="hello" class="introMsg" >Hi, I'm Kevin!<p>
-	 <br>
 	 <p id="welcome"  class="introMsg" >Welcome to my portfolio. Feel free to scroll around, and learn more about me.</p>
 	 <p  class="introMsg" id="blurb" > Check out my work at the links below if you want to skip the scrolling :) </p>
 	</div>
@@ -40,10 +50,14 @@
 </div>
 
 
+
 <script type="text/javascript" src="src/fullpage.js"></script>
+<script type="text/javascript" src="src/examples.js"></script>
 <script type="text/javascript">
 	var myFullpage = new fullpage('#fullpage', {
-		sectionsColor: ['#A5DEE5', '#231D37', '#FEFDCA', '#FFD3B6', '#FFCFDF']
+		sectionsColor: ['#A5DEE5', '#231D37', '#FEFDCA', '#FFD3B6', '#FFCFDF'],
+		anchors: ['p1', 'p2', 'p3', 'p4', 'p5'],
+        	menu: '#menu'
 	});
 </script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

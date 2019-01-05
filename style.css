@@ -18,7 +18,7 @@
 
 
 #section0  {
-  background: url('src/background-blur2.jpg') no-repeat center center fixed;
+  background: url('src/background3.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -130,3 +130,44 @@ font-size:15px;
 
 @-o-keyframes fadein { from {opacity:0;} to {opacity: 1;}}
 */
+
+/*
+ * MENU
+ */
+
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #000;
+	font-family: 'Alegreya Sans SC';
+	font-size: 10px;
+}
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+#menu li.active,
+#menu a:hover{
+	color: whitesmoke;
+}
+#menu li a,
+#menu li.active a{
+	display:block;
+}
+#menu li.active a{
+	color: whitesmoke;
+}
+#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+	text-align:center;
+}
+
+
+
