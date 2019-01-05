@@ -1,3 +1,7 @@
+/*
+ *  FONTS
+ */
+
 @font-face {
     font-family: 'quicksandlight';
     src: url('src/fonts/quicksand-light-webfont.woff2') format('woff2'),
@@ -6,30 +10,15 @@
     font-style: normal;
 
 }
-.introMsg {
-font-family: 'quicksandlight';
-color: whitesmoke;
- 
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
- 
-}
 
-#title {
-font-weight:normal;
-font-style:normal;
-font-size: 100px;
-}
 
-p.introMsg {
-font-size: 30px;
-}
+/*
+ *  FIRST SECTION
+ */
 
-#blurb {
-font-size:15px;
-}
 
 #section0  {
-  background: url('src/background-blur1.jpg') no-repeat center center fixed;
+  background: url('src/background-blur2.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -53,3 +42,91 @@ font-size:15px;
   padding: 1px;
 }
 
+
+.introMsg {
+font-family: 'quicksandlight';
+color: whitesmoke;
+ 
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+ 
+}
+
+
+p.introMsg {
+font-size: 30px;
+}
+
+#title {
+font-weight:normal;
+font-style:normal;
+font-size: 100px;
+}
+
+#blurb {
+font-size:15px;
+}
+
+/* Section 0 Text fade in */
+
+#title {
+    margin-top: 25px;
+    text-align: center;
+    animation: 1s ease 0s normal forwards 1 fadein;
+    -moz-animation: 1s ease 0s normal forwards 1 fadein; /* Firefox */
+    -webkit-animation: 1s ease 0s normal forwards 1 fadein; /* Safari and Chrome */
+    -o-animation: 1s ease 0s normal forwards 1 fadein; /* Opera */
+}
+
+#profileImg {
+    
+    animation: 1s ease 0s normal forwards 1 fadein;
+    -moz-animation: 1s ease 0s normal forwards 1 fadein; /* Firefox */
+    -webkit-animation: 1s ease 0s normal forwards 1 fadein; /* Safari and Chrome */
+    -o-animation: 1s ease 0s normal forwards 1 fadein; /* Opera */
+}
+
+#hello {
+    
+    animation: 2s ease 0s normal forwards 1 fadein;
+    -moz-animation: 2s ease 0s normal forwards 1 fadein; /* Firefox */
+    -webkit-animation: 2s ease 0s normal forwards 1 fadein; /* Safari and Chrome */
+    -o-animation: 2s ease 0s normal forwards 1 fadein; /* Opera */
+}
+
+#welcome {
+    
+    animation: 4s ease 0s normal forwards 1 fadein;
+    -moz-animation: 4s ease 0s normal forwards 1 fadein; /* Firefox */
+    -webkit-animation: 4s ease 0s normal forwards 1 fadein; /* Safari and Chrome */
+    -o-animation: 4s ease 0s normal forwards 1 fadein; /* Opera */
+}
+
+#blurb {
+    
+    animation: 6s ease 0s normal forwards 1 fadein;
+    -moz-animation: 6s ease 0s normal forwards 1 fadein; /* Firefox */
+    -webkit-animation: 6s ease 0s normal forwards 1 fadein; /* Safari and Chrome */
+    -o-animation: 6s ease 0s normal forwards 1 fadein; /* Opera */
+}
+
+@keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+/*
+ 
+@keyframes fadein { from {opacity:0;} to {opacity:1;} }
+
+@-moz-keyframes fadein { from {opacity:0;} to {opacity:1;} }
+
+@-webkit-keyframes fadein { from {opacity:0;} to {opacity:1;} }
+
+@-o-keyframes fadein { from {opacity:0;} to {opacity: 1;}}
+*/
