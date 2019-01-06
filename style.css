@@ -47,19 +47,21 @@
 font-family: 'quicksandlight';
 color: whitesmoke;
  
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
  
 }
 
 
 p.introMsg {
-font-size: 30px;
+font-size: 2vw;
 }
 
 #title {
 font-weight:normal;
 font-style:normal;
-font-size: 100px;
+font-size: 7vw;
+
+font-family: 'quicksandlight';
 }
 
 /* Section 0 Text fade in */
@@ -173,7 +175,7 @@ font-size: 100px;
   height: 100%;
   backface-visibility: hidden;
   color: #4F4E4E;
-font-size: 10px;
+font-size: 1%;
 font-family: 'quicksandlight';
 }
 
@@ -201,7 +203,7 @@ font-family: 'quicksandlight';
 	margin: 10px;
 	color: #000;
 	font-family: 'Alegreya Sans SC';
-	font-size: 10px;
+	font-size: 1%;
 }
 #menu li a{
 	text-decoration:none;
