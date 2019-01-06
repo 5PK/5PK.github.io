@@ -18,7 +18,7 @@
 
 
 #section0  {
-  background: url('src/background5.jpg') no-repeat center center fixed;
+  background: url('src/background6.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -89,7 +89,7 @@ font-size: 100px;
     -o-animation: 4s ease 0s normal forwards 1 fadein; /* Opera */
 }
 
-#blurb {
+#blurb,#quickLinks {
     
     animation: 6s ease 0s normal forwards 1 fadein;
     -moz-animation: 6s ease 0s normal forwards 1 fadein; /* Firefox */
@@ -127,6 +127,23 @@ font-size: 100px;
 @-o-keyframes fadein { from {opacity:0;} to {opacity: 1;}}
 */
 
+#quickLinks{
+  color:DimGrey;
+
+  font-family: 'quicksandlight';
+}
+
+#quickLinks a{
+  padding: 10px;
+  font-family: 'quicksandlight';
+  color: DimGrey;
+}
+
+#quickLinks a:hover{
+  color: DarkGray;
+  text-decoration: none;
+}
+
 .flip-card {
   background-color: transparent;
   width: 160px;
@@ -156,7 +173,8 @@ font-size: 100px;
   height: 100%;
   backface-visibility: hidden;
   color: #4F4E4E;
-  font-family: 'Alegreya Sans SC';
+font-size: 10px;
+font-family: 'quicksandlight';
 }
 
 .flip-card-front {
