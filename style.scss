@@ -84,59 +84,7 @@ body, html{
   text-align: center;
 }
 
-/*
- *  LOADING BAR
- */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes pulse {
-  50% {
-    background: white;
-  }
-}
-html, body {
-  height: 100%;
-}
 
-body {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: #333333;
-}
-
-.loading-pulse {
-  position: relative;
-  width: 6px;
-  height: 16px;
-  background: rgba(255, 255, 255, 0.2);
-  animation: pulse 2000ms infinite;
-  animation-delay: 666.6666666667ms;
-}
-.loading-pulse:before, .loading-pulse:after {
-  content: "";
-  position: absolute;
-  display: block;
-  height: 16px;
-  width: 6px;
-  background: rgba(255, 255, 255, 0.2);
-  top: 50%;
-  transform: translateY(-50%);
-  animation: pulse 2000ms infinite;
-}
-.loading-pulse:before {
-  left: -12px;
-}
-.loading-pulse:after {
-  left: 12px;
-  animation-delay: 3000ms;
-}
 /*
  *  FIRST SECTION
  */
@@ -328,3 +276,10 @@ font-family: 'quicksandlight';
  * SECOND SECTION 
  */ 
 
+#expListWrapper {
+  border-style:solid;
+  border-right: 6px;
+  border-color: white;
+  height: 100%;
+  width:50px;
+}

@@ -29,7 +29,12 @@
 <div id="fullpage">
 	<div class="section active" id="section0">
   	  <br>
-	  <h1 id="title" class="introMsg">ktran.info</h1>
+	  <div class="hero-image">
+  	    <div class="hero-text">
+	      <h1 id="title" class="introMsg">ktran.info</h1>
+	  
+	    </div>
+	  </div>
 	  <br>
 	  <br>
 	  <img id="profileImg" src="src/ktran.jpg">
@@ -61,17 +66,27 @@
               </div>
             </div>
           </div>
+	</div>
+	<div class="section" id="section1">
 
+	  <div id="expListWrapper">
+	  <h1 >Work Experience</h1>
+	    <ul style="list-style-type:none">
+	      <li >Evenica Corp.</li>
+	      <li >Bashx3</li>
+	      <li >Tomson Automotive LTD.</li>
+            </ul>
+	  </div>
 	</div>
-	<div class="section" id="section1"><h1 id="title">Under Construction</h1></div>
 	<div class="section" id="section2">
-	    <div class="slide "><h1 id="title">Under Construction</h1></div>
-	    <div class="slide active"><h1 id="title">Under Construction</h1></div>
-	    <div class="slide"><h1 id="title">Under Construction</h1></div>
-	</div>
-	<div class="section" id="section3"><h1 id="title">Under Construction</h1></div>
+	    <div class="slide "><h1 class="header">Under Construction</h1></div>
+	    <div class="slide active"><h1 class="header">Under Construction</h1></div>
+	    <div class="slide"><h1  class="header">Under Construction</h1></div>
 	
-	<div class="section" id="section4"><h1 id="title">Under Construction</h1></div>
+	</div>
+	<div class="section" id="section3"><h1  class="header">Under Construction</h1></div>
+	
+	<div class="section" id="section4"><h1  class="header">Under Construction</h1></div>
 </div>
 
 
@@ -80,7 +95,7 @@
 <script type="text/javascript" src="src/examples.js"></script>
 <script type="text/javascript">
 	var myFullpage = new fullpage('#fullpage', {
-		sectionsColor: ['#A5DEE5', '#010101', '#182538', '#333365', '#934656'],
+		sectionsColor: ['#182538', '#010101', '#182538', '#333365', '#934656'],
 		anchors: ['p1', 'p2', 'p3', 'p4', 'p5'],
         	menu: '#menu'
 	});
