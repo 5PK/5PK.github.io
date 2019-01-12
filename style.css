@@ -31,6 +31,19 @@ body, html{
   float:none;
 }
 
+.subtitle {
+
+font-weight:normal;
+font-style:normal;
+font-size: 4vw;
+color: whitesmoke;
+margin-top:3vw;
+font-family: 'quicksandlight';
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-name: anim-1;
+}
+
 /*
  * MENU
  */
@@ -82,60 +95,6 @@ body, html{
 
 #section0{
   text-align: center;
-}
-
-/*
- *  LOADING BAR
- */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes pulse {
-  50% {
-    background: white;
-  }
-}
-html, body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: #333333;
-}
-
-.loading-pulse {
-  position: relative;
-  width: 6px;
-  height: 16px;
-  background: rgba(255, 255, 255, 0.2);
-  animation: pulse 2000ms infinite;
-  animation-delay: 666.6666666667ms;
-}
-.loading-pulse:before, .loading-pulse:after {
-  content: "";
-  position: absolute;
-  display: block;
-  height: 16px;
-  width: 6px;
-  background: rgba(255, 255, 255, 0.2);
-  top: 50%;
-  transform: translateY(-50%);
-  animation: pulse 2000ms infinite;
-}
-.loading-pulse:before {
-  left: -12px;
-}
-.loading-pulse:after {
-  left: 12px;
-  animation-delay: 3000ms;
 }
 /*
  *  FIRST SECTION
@@ -250,6 +209,14 @@ font-family: 'quicksandlight';
     66% { opacity:0; }
     100% { opacity:1; }
 }
+
+@keyframes anim-1 {
+  0%, 8.3% { left: -100%; opacity: 0; }
+  8.3%,25% { left: 25%; opacity: 1; }
+  33.33%, 100% { left: 110%; opacity: 0; }
+}
+
+
 /*
  
 @keyframes fadein { from {opacity:0;} to {opacity:1;} }
@@ -311,7 +278,7 @@ font-family: 'quicksandlight';
 }
 
 .flip-card-front {
-  z-index: 2;
+  #z-index: 2;
 }
 
 .flip-card-back {
@@ -326,5 +293,41 @@ font-family: 'quicksandlight';
 
 /*
  * SECOND SECTION 
- */ 
+ */
+#section1Container{
+height:85%;
+width:100%;
+}
 
+#expListWrapper {
+height:100%;
+width:30%;
+margin:0px;
+font-family: quicksandlight;
+color: whitesmoke;
+border-width: 1px;
+border-right-style: solid;
+border-left-style:none;
+border-top-style:none;
+border-bottom-style:none;
+border-right-color: whitesmoke;
+display:inline-block;
+text-align:left;
+float:left;
+}
+
+#expDetail{
+height:100%;
+width:70%;
+display:inline-block;
+
+float:left;
+}
+
+#expList{
+  margin-top:40px;
+}
+
+.expListItem{
+  padding:5px;
+}
