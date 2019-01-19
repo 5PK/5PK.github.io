@@ -30,3 +30,63 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background: #eee;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.menuTitle {
+  font-size: 350%;
+  margin-top: 0;
+  margin-bottom: 0.33em;
+  cursor: pointer;
+}
+
+.menuBtn {
+  background: #43415f;
+  border-radius: 5px;
+  height: 5.5%;
+  width: 100%;
+  opacity: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  transform-origin-y: 0%;
+  color: white;
+  cursor: pointer;
+}
+.menuBtn:nth-child(1) {
+  background: #f69a9a;
+}
+
+.menuBtn:nth-child(2) {
+  background: #83ae9b;
+}
+
+.menuBtn:nth-child(3) {
+  background: #ef4566;
+}
+
+.menuBtn:nth-child(4) {
+  background: #f9cdae;
+}
+
+.menuBtn:nth-child(5) {
+  background: #c8c8a9;
+}
+
+.itemText{
+  margin-top: 10px ;
+  font-size: 100%;
+}
