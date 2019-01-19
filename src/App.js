@@ -3,6 +3,7 @@ import posed from 'react-pose';
 import logo from './logo.svg';
 import './App.css';
 
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 
 const Sidebar = posed.ul({
   open: {
@@ -33,39 +34,9 @@ const Item = posed.li({
 });
 
 const Line = posed.div({
-  
-
-
-
-
-
 });
 
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
-
-class Example extends React.PureComponent {
+class Menu extends React.PureComponent {
   state = { isOpen: false };
 
   componentDidMount() {
@@ -73,21 +44,28 @@ class Example extends React.PureComponent {
   }
 
   toggle = () => this.setState({ isOpen: !this.state.isOpen });
+  
+  
+
 
   render() {
     const { isOpen } = this.state;
 
     return (
-      <Sidebar className="sidebar" pose={isOpen ? 'open' : 'closed'}>
-        <h1 className="menuTitle" >ktran.info</h1>
-        <p>Hi, I'm Kevin. I write code, but most of all I like to learn.</p>
-        <Item className="menuBtn" > <div> <h3 className="itemText" >My Experience</h3> </div>  </Item>
-        <Item className="menuBtn" > <h3 className="itemText" >My Projects </h3></Item>
-        <Item className="menuBtn" > <h3 className="itemText" >About Me</h3> </Item>
-        <Item className="menuBtn" > <h3 className="itemText" >How to make a site like this</h3> </Item>
-      </Sidebar>
+     
+        <Sidebar className="sidebar" pose={isOpen ? 'open' : 'closed'}>
+          <h1 className="menuTitle" >ktran.info <Link className="menuLink" to="/"></Link>          </h1>
+          <p>Hi, I'm Kevin. I write code, but most of all I like to learn.</p>
+          <Item className="menuBtn">  <Link className="menuLink" to="/">Work Experience</Link> </Item>
+          <Item className="menuBtn">  <Link className="menuLink" to="/modelViewer">Personal Projects</Link> </Item>
+          <Item className="menuBtn">  <Link className="menuLink" to="/">About Me!</Link> </Item>
+          <Item className="menuBtn">  <Link className="menuLink" to="/about">How did I make this?</Link> </Item>
+        </Sidebar>
+      
+      
+
     );
   }
 }
 
-export default Example;
+export default Menu;

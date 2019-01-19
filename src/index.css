@@ -17,3 +17,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+#sideBar {
+  float:left;
+}
+
+#content {
+  float:right;
+  margin-left: 10px;
+  width:70%;
+}
+
+.entire-thing {
+  width: 100%;
+}
+
+#site-container {
+  background: white;
+ 
+  min-height: calc(100vh - 20px);
+}
+
+#content-container {
+ 
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+ul#site-nav {
+  flex: 0 0 120px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+p {
+  margin-bottom: 20px;
+}
