@@ -12,9 +12,9 @@ const P = posed.p({
 
 export default () => (
   <Container>
-    <h2>About</h2>
+    <h2>Who is Kevin Tran?</h2>
     <P>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      I'm a Software Developer from Hamilton, Ontario. Like the side 
     </P>
     <P>
       Lorem Ipsum has been the industry's standard dummy text ever since the

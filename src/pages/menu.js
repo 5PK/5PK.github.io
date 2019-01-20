@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import posed from 'react-pose';
-import logo from './logo.svg';
-import './App.css';
+import logo from '../assets/images/logo.svg';
+import './styles/menu.css';
 
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 
@@ -54,12 +54,12 @@ class Menu extends React.PureComponent {
     return (
      
         <Sidebar className="sidebar" pose={isOpen ? 'open' : 'closed'}>
-          <h1 className="menuTitle" >ktran.info <Link className="menuLink" to="/"></Link>          </h1>
-          <p>Hi, I'm Kevin. I write code, but most of all I like to learn.</p>
-          <Item className="menuBtn">  <Link className="menuLink" to="/">Work Experience</Link> </Item>
-          <Item className="menuBtn">  <Link className="menuLink" to="/modelViewer">Personal Projects</Link> </Item>
-          <Item className="menuBtn">  <Link className="menuLink" to="/">About Me!</Link> </Item>
-          <Item className="menuBtn">  <Link className="menuLink" to="/about">How did I make this?</Link> </Item>
+          <h1 className="menuTitle" >ktran.info <Link className="menuLink" to="/">test</Link>          </h1>
+          <p>“That's all it took to solve problems - just sense.”</p>
+          <Item className="menuBtn">  <Link className="menuLink" to="/work">Work Experience</Link> </Item>
+          <Item className="menuBtn">  <Link className="menuLink" to="/projects">Personal Projects</Link> </Item>
+          <Item className="menuBtn">  <Link className="menuLink" to="/about">About Me!</Link> </Item>
+          <Item className="menuBtn">  <Link className="menuLink" to="/howTo">How did I make this?</Link> </Item>
         </Sidebar>
       
       

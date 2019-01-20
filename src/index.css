@@ -20,12 +20,14 @@ code {
 
 #sideBar {
   float:left;
+  height: 100%; 
 }
 
 #content {
   float:right;
   margin-left: 10px;
   width:70%;
+  height:100%;
 }
 
 .entire-thing {
@@ -39,26 +41,6 @@ code {
 }
 
 #content-container {
- 
+  height: 100%; 
   width: 100%;
-}
-
-ul {
-  list-style: none;
-}
-
-ul#site-nav {
-  flex: 0 0 120px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-h2 {
-  margin-bottom: 30px;
-}
-
-p {
-  margin-bottom: 20px;
 }

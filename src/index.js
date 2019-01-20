@@ -2,15 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-import Menu from './App';
+import Menu from './pages/menu';
 import * as serviceWorker from './serviceWorker';
 
 
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import posed, { PoseGroup } from 'react-pose';
-import Home from './pages/home';
-import About from './pages/about';
+
+//Pages to import
 import ModelViewer from './pages/modelViewer';
+import Work from './pages/work';
+import Projects from './pages/projects';
+import About from './pages/about';
+import HowTo from './pages/howTo';
 
 //ReactDOM.render(<App />, document.getElementById('root'));
 
@@ -34,9 +38,12 @@ const RouteContainer = posed.div({
                 <PoseGroup>
                     <RouteContainer key={location.pathname}>
                         <Switch location={location}>
-                        <Route exact path="/" component={Home} key="home" />
+                        <Route exact path="/" component={ModelViewer} key="modelViewer" />
+                        <Route  path="/projects" component={Projects} key="projects" />
+                        <Route  path="/work" component={Work} key="work" />
+                        <Route  path="/howTo" component={HowTo} key="howTo" />
                         <Route path="/about" component={About} key="about" />
-                        <Route path="/modelViewer" component={ModelViewer} key="modelViewer" />
+                        
                         </Switch>
                     </RouteContainer>
                 </PoseGroup>

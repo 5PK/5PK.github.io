@@ -14,7 +14,7 @@ const Item = posed.li({
 
 export default () => (
   <div>
-    <h2>Home</h2>
+    <h2>My Experience</h2>
     <ListContainer>
       <Item>
         <Link to="/about">About</Link>
