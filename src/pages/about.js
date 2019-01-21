@@ -14,16 +14,13 @@ export default () => (
   <Container>
     <h2>Who is Kevin Tran?</h2>
     <P>
-      I'm a Software Developer from Hamilton, Ontario. Like the side 
+      I'm a Software Developer from Hamilton, Ontario.
     </P>
     <P>
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book.
+      I love to learn new things and apply what I've learned to my work. I'm mainly a web developer .
     </P>
     <P>
-      It has survived not only five centuries, but also the leap into electronic
-      typesetting, remaining essentially unchanged.
+      Speaking of guitar, 
     </P>
     <P>
       It was popularised in the 1960s with the release of Letraset sheets
