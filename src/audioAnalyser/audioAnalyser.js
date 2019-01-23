@@ -8,8 +8,16 @@ https://www.twilio.com/blog/audio-visualisation-web-audio-api--react
 */
 
 import React, { Component } from 'react';
+import AudioVisualiser from './audioVisualizer';
 
 class AudioAnalyser extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = { audioData: new Uint8Array(0) };
+        this.tick = this.tick.bind(this);
+      }
+    
 
     // When Component mounts, set up Web Autio API objets.
     componentDidMount() {
@@ -22,12 +30,17 @@ class AudioAnalyser extends Component {
     
         // This dataArray will be used to store the waveform data that the AnalyserNode will be creating.
         this.dataArray = new Uint8Array(this.analyser.frequencyBinCount);
-    
+
+
+
         // The source, which is the audio file.
         this.source = this.audioContext.createMediaStreamSource(this.props.audio);
     
+        console.log('this.source below');
+        console.log(this.source);
         // connect source to the anlayser .
         this.source.connect(this.analyser);
+        this.rafId = requestAnimationFrame(this.tick);
       }
 
       // Method that will be called every time requestAnimationFrame runs. 
@@ -36,18 +49,32 @@ class AudioAnalyser extends Component {
       // Finally, it will call on requestAnimationFrame again to request the next update.
       tick() {
 
+        console.log('tick');
         // Use the analyser to update the visualization from the dataArray
         this.analyser.getByteTimeDomainData(this.dataArray);
 
         // 
         this.setState({ audioData: this.dataArray });
-        
+
         this.rafId = requestAnimationFrame(this.tick);
+
+        
       }
+
+      componentWillUnmount() {
+        cancelAnimationFrame(this.rafId);
+        this.analyser.disconnect();
+        this.source.disconnect();
+      }
+    
+      render() {
+        return <AudioVisualiser audioData={this.state.audioData} />;
+      }
+    }
+    
+    export default AudioAnalyser;
  
-}
 
 
 
-export default AudioAnalyser;
 

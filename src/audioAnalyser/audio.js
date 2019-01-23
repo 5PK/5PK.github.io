@@ -1,42 +1,58 @@
 import React, { Component } from 'react';
-import AudioAnalyser from './AudioAnalyser';
+import AudioAnalyser from './audioAnalyser';
 
-class App extends Component {
+import song from './Teehee.mp3';
+
+class Audio extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      audio: null
+    this.state = {        
+        audio : null
     };
-    this.toggleMicrophone = this.toggleMicrophone.bind(this);
+    this.audioEle = null;
+    this.songName = 'Blues in A';
+    this.audioStatus = 'PAUSED';
+
+    this.toggleMusic = this.toggleMusic.bind(this);
+    
+  }
+  componentDidMount() {
+    this.audioEle = document.getElementById('audio-element');
   }
 
-  async getMicrophone() {
-    const audio = await navigator.mediaDevices.getUserMedia({
-      audio: true,
-      video: false
-    });
-    this.setState({ audio });
+  async startMusic() {   
+
+    this.audioEle.play();
+    
+    var mediaStream = this.audioEle.captureStream();
+    
+    this.setState({ audio: mediaStream });
+
+    
   }
 
-  stopMicrophone() {
+  stopMusic() {
+    this.audioEle.pause();
     this.state.audio.getTracks().forEach(track => track.stop());
     this.setState({ audio: null }); 
   }
 
-  toggleMicrophone() {
+  toggleMusic() {
     if (this.state.audio) {
-      this.stopMicrophone();
+      this.stopMusic();
     } else {
-      this.getMicrophone();
+      this.startMusic();
     }
   }
 
+
   render() {
     return (
-      <div className="App">
+      <div className="AudioPlayer">        
+        <audio id="audio-element" preload="true" src={`${song}`} crossorigin="anonymous" ></audio>
         <div className="controls">
-          <button onClick={this.toggleMicrophone}>
-            {this.state.audio ? 'Stop microphone' : 'Get microphone input'}
+          <button onClick={this.toggleMusic}>
+           {this.state.audio ? 'Pause' : 'Play'}
           </button>
         </div>
         {this.state.audio ? <AudioAnalyser audio={this.state.audio} /> : ''}
@@ -45,4 +61,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Audio;
