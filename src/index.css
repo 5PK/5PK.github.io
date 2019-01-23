@@ -17,3 +17,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+#sideBar {
+  float:left;
+  height: 100%; 
+}
+
+#content {
+  float:right;
+  margin-left: 10px;
+  width:70%;
+  height:100%;
+}
+
+.entire-thing {
+  width: 100%;
+}
+
+#site-container {
+  background: white;
+ 
+  min-height: calc(100vh - 20px);
+}
+
+#content-container {
+  height: 100%; 
+  width: 100%;
+}
