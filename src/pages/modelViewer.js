@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import threeEntryPoint from '../threejs/threeEntryPoint';
+import threeEntryPointB from '../audioAnalyser/threeEntryPoint';
+
 import AudioTest from '../audioAnalyser/audio';
 
 import "./styles/modelViewer.css"
@@ -21,6 +23,7 @@ const P = posed.p({
 export default class ThreeContainer extends Component {
   componentDidMount() {
     threeEntryPoint(this.threeRootElement);
+    threeEntryPointB(this.threeRootElementB);
     
   }
   render () {
@@ -29,10 +32,7 @@ export default class ThreeContainer extends Component {
           
           <Container>
             <h1>Hello World!</h1>
-            <div className="header-header" ref={element => this.threeRootElement = element} />
-
-
-            
+            <div className="header-header" ref={element => this.threeRootElement = element} />            
 
             <P>
               I'm Kevin, 
@@ -48,7 +48,7 @@ export default class ThreeContainer extends Component {
             </P>
 
 
-            
+            <div className="header-header" ref={element => this.threeRootElementB = element} />      
           </Container>
           <AudioTest></AudioTest>
         </div>
