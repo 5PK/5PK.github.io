@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import threeEntryPoint from '../threejs/threeEntryPoint';
-import AudioTest from '../audioAnalyser/audio';
+
+import AudioTest from '../customaudio/audio';
+
 
 import "./styles/modelViewer.css"
 
@@ -20,7 +22,8 @@ const P = posed.p({
 
 export default class ThreeContainer extends Component {
   componentDidMount() {
-    threeEntryPoint(this.threeRootElement);
+    
+
     
   }
   render () {
@@ -29,10 +32,7 @@ export default class ThreeContainer extends Component {
           
           <Container>
             <h1>Hello World!</h1>
-            <div className="header-header" ref={element => this.threeRootElement = element} />
-
-
-            
+            <AudioTest></AudioTest>          
 
             <P>
               I'm Kevin, 
@@ -46,11 +46,9 @@ export default class ThreeContainer extends Component {
             <P>
               Also, see my tutorial if you want to make a React app similar to this one!
             </P>
-
-
-            
           </Container>
-          <AudioTest></AudioTest>
+          
+    
         </div>
       );
   }
