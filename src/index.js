@@ -10,7 +10,7 @@ import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import posed, { PoseGroup } from 'react-pose';
 
 //Pages to import
-import ModelViewer from './pages/modelViewer';
+import Home from './pages/home';
 import Work from './pages/work';
 import Projects from './pages/projects';
 import About from './pages/about';
@@ -38,7 +38,7 @@ const RouteContainer = posed.div({
                 <PoseGroup>
                     <RouteContainer key={location.pathname}>
                         <Switch location={location}>
-                        <Route exact path="/" component={ModelViewer} key="modelViewer" />
+                        <Route exact path="/" component={Home} key="home" />
                         <Route  path="/projects" component={Projects} key="projects" />
                         <Route  path="/work" component={Work} key="work" />
                         <Route  path="/howTo" component={HowTo} key="howTo" />

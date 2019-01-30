@@ -1,6 +1,7 @@
 import React from 'react';
 import posed from 'react-pose';
 import { Link } from 'react-router-dom';
+import './styles/menu.css';
 
 const ListContainer = posed.ul({
   enter: { staggerChildren: 50 },
@@ -14,23 +15,27 @@ const Item = posed.li({
 
 export default () => (
   <div>
-    <h2>My Experience</h2>
+    <h1>My Experience</h1>
     <ListContainer>
+      <br></br>
+      <br></br>
       <Item>
-        <Link to="/about">About</Link>
-        <p>Some generic description about the about page. About.</p>
+        <div>
+          <h3>Evenica</h3>
+          <p>Some generic description about the about page. About.</p>
+        </div>
       </Item>
       <Item>
-        <Link to="/about">About</Link>
-        <p>Some generic description about the about page. About.</p>
+        <div>
+          <h3>Bashx3</h3>
+          <p>Some generic description about the about page. About.</p>
+        </div>
       </Item>
       <Item>
-        <Link to="/about">About</Link>
-        <p>Some generic description about the about page. About.</p>
-      </Item>
-      <Item>
-        <Link to="/about">About</Link>
-        <p>Some generic description about the about page. About.</p>
+        <div>
+          <h3>Tomson Automotive</h3>
+          <p>Some generic description about the about page. About.</p>
+        </div>
       </Item>
     </ListContainer>
   </div>
