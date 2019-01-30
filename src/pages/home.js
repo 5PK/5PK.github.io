@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import threeEntryPoint from '../threejs/threeEntryPoint';
 
-import AudioTest from '../customaudio/audio';
+import AudioTest from '../audioAnalyser/audio';
 
 
 import "./styles/modelViewer.css"
@@ -20,7 +20,7 @@ const P = posed.p({
 
 
 
-export default class ThreeContainer extends Component {
+export default class Home extends Component {
   componentDidMount() {
     
 
