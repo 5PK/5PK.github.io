@@ -29,10 +29,6 @@ class Audio extends Component {
         // threejs setup
         this.scene = new THREE.Scene();
         this.camera = new THREE.PerspectiveCamera(10, window.innerWidth / window.innerHeight, 0.1, 8000);
-        
-        //this.camera.position.set(0, 0, 2100);
-        //this.camera.lookAt(this.scene.position);
-
         this.camera.position.set(0, 0, 100);
         this.camera.lookAt(this.scene.position);
         this.scene.add(this.camera);
@@ -43,14 +39,12 @@ class Audio extends Component {
             canvas: this.canvas
         });
         this.renderer.setPixelRatio(window.devicePixelRatio);
-        this.renderer.setSize(500, 500);
+        this.renderer.setSize(600, 300);
 
         this.clock = new THREE.Clock();
-
         this.group = new THREE.Group();
         this.noise = new SimplexNoise();
-
-        var icosahedronGeometry = new THREE.IcosahedronGeometry(10, 4);
+        var icosahedronGeometry = new THREE.IcosahedronGeometry(4, 2);
         var lambertMaterial = new THREE.MeshLambertMaterial({
             color: 0xff00ee,
             wireframe: true
@@ -61,7 +55,7 @@ class Audio extends Component {
         this.ball.position.set(0, 0, 0);
         this.group.add(this.ball);
 
-        
+
 
         document.getElementById('test').appendChild(this.renderer.domElement);
 
@@ -73,10 +67,6 @@ class Audio extends Component {
         var bufferLength = analyser.frequencyBinCount;
         var dataArray = new Uint8Array(bufferLength);
 
-        renderer.setSize(window.innerWidth, window.innerHeight);
-
-
-
         var ambientLight = new THREE.AmbientLight(0xaaaaaa);
         scene.add(ambientLight);
 
@@ -87,14 +77,9 @@ class Audio extends Component {
         spotLight.castShadow = true;
         scene.add(spotLight);
 
-        //var orbitControls = new THREE.OrbitControls(camera);
-        //orbitControls.autoRotate = true;
-
         scene.add(group);
 
-        //document.getElementById('out').appendChild(renderer.domElement);
-
-        window.addEventListener('resize', onWindowResize, false);
+        //window.addEventListener('resize', onWindowResize, false);
 
         render();
 
@@ -121,16 +106,16 @@ class Audio extends Component {
             renderer.render(scene, camera);
             requestAnimationFrame(render);
         }
-
+/*
         function onWindowResize() {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
         }
-
+*/
         audio.play();
 
-       function makeRoughBall(mesh, bassFr, treFr) {
+        function makeRoughBall(mesh, bassFr, treFr) {
             mesh.geometry.vertices.forEach(function (vertex, i) {
                 var offset = mesh.geometry.parameters.radius;
                 var amp = 7;
@@ -145,7 +130,7 @@ class Audio extends Component {
             mesh.geometry.computeVertexNormals();
             mesh.geometry.computeFaceNormals();
         }
-    
+
 
 
         //some helper functions here
@@ -155,7 +140,7 @@ class Audio extends Component {
 
         function modulate(val, minVal, maxVal, outMin, outMax) {
             var fr = fractionate(val, minVal, maxVal);
-            var delta = outMax - outMin;
+            var delta = (outMax/3) - (outMin/3);
             return outMin + (fr * delta);
         }
 
@@ -202,10 +187,10 @@ class Audio extends Component {
             this.ctx.resume();
         }
 
-        if (this.counter === 0){
+        if (this.counter === 0) {
             console.log("test");
-                    this.startAnimation4(this.analyser, this.renderer, this.scene, this.audio, this.camera, this.ball, this.group, this.noise);
-        this.counter ++;
+            this.startAnimation4(this.analyser, this.renderer, this.scene, this.audio, this.camera, this.ball, this.group, this.noise);
+            this.counter++;
         }
     }
 
