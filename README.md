@@ -1,3 +1,7 @@
+
+This is my developer portfolio. It's not ready for deployment yet, but feel free to clone the repo and have a look at what I've completed so far! There's a cool audio-visualizer on the home page :)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
