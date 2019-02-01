@@ -3,6 +3,8 @@ import posed from 'react-pose';
 import logo from '../assets/images/logo.svg';
 import './styles/menu.css';
 
+
+
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 
 const Sidebar = posed.ul({
@@ -54,8 +56,9 @@ class Menu extends React.PureComponent {
     return (
      
         <Sidebar className="sidebar" pose={isOpen ? 'open' : 'closed'}>
-          <h1 className="menuTitle" >ktran.info <Link className="menuLink" to="/">test</Link>          </h1>
+          <Link className="menuTitle" to="/">ktran.info</Link> 
           <p>“That's all it took to solve problems - just sense.”</p>
+          
           <Item className="menuBtn">  <Link className="menuLink" to="/work">Work Experience</Link> </Item>
           <Item className="menuBtn">  <Link className="menuLink" to="/projects">Personal Projects</Link> </Item>
           <Item className="menuBtn">  <Link className="menuLink" to="/about">About Me!</Link> </Item>

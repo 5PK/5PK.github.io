@@ -16,6 +16,7 @@ import Projects from './pages/projects';
 import About from './pages/about';
 import HowTo from './pages/howTo';
 
+
 //ReactDOM.render(<App />, document.getElementById('root'));
 
 const RouteContainer = posed.div({
@@ -42,8 +43,8 @@ const RouteContainer = posed.div({
                         <Route  path="/projects" component={Projects} key="projects" />
                         <Route  path="/work" component={Work} key="work" />
                         <Route  path="/howTo" component={HowTo} key="howTo" />
-                        <Route path="/about" component={About} key="about" />
-                        
+                        <Route path="/about" component={About} key="about" />          
+                      
                         </Switch>
                     </RouteContainer>
                 </PoseGroup>

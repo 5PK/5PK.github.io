@@ -3,9 +3,6 @@ import alphaTexture from '../assets/textures/stripes_gradient.jpg';
 import * as THREE from 'three';
 import song from './Teehee.mp3';
 
-import threeEntry from './threeEntryPoint';
-import threeSubject from './SceneSubject';
-import threeLights from './GeneralLights';
 import SimplexNoise from './simplexnoise';
 
 class Audio extends Component {
@@ -24,7 +21,12 @@ class Audio extends Component {
 
         this.audioEle = document.getElementById('audio-element');
         this.canvas = document.getElementById('testCanvas');
-        console.log("component mounted");
+        this.ctx = new AudioContext();
+        this.audio = document.getElementById('audio-element');
+        this.audioSrc = this.ctx.createMediaElementSource(this.audio);
+        this.audioSrc.connect(this.ctx.destination);
+        this.analyser = this.ctx.createAnalyser();
+        this.audioSrc.connect(this.analyser);
 
         // threejs setup
         this.scene = new THREE.Scene();
@@ -58,6 +60,9 @@ class Audio extends Component {
 
 
         document.getElementById('test').appendChild(this.renderer.domElement);
+
+        this.startAnimation4(this.analyser, this.renderer, this.scene, this.audio, this.camera, this.ball, this.group, this.noise);
+        this.counter++;
 
     }
 
@@ -113,7 +118,7 @@ class Audio extends Component {
             renderer.setSize(window.innerWidth, window.innerHeight);
         }
 */
-        audio.play();
+      
 
         function makeRoughBall(mesh, bassFr, treFr) {
             mesh.geometry.vertices.forEach(function (vertex, i) {
