@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import threeEntryPoint from '../threejs/threeEntryPoint';
+
 
 import AudioTest from '../audioAnalyser/audio';
 
@@ -9,31 +9,44 @@ import "./styles/modelViewer.css"
 import  { Fragment } from 'react';
 import posed from 'react-pose';
 
-const Container = posed.div({
-  enter: { staggerChildren: 50 }
+
+const ListContainer = posed.ul({
+  open: {
+    x: '10%',
+    delayChildren: 200,
+    staggerChildren: 50
+  },
+  closed: { x: '100%', delay: 500 },
 });
 
-const P = posed.p({
-  enter: { x: 0, opacity: 1 },
-  exit: { x: 50, opacity: 0 }
+const P = posed.li({
+  open: { y: 0, opacity: 1 },
+  closed: { y: 20, opacity: 0 },
 });
 
 
 
 export default class Home extends Component {
+
+  state = { isOpen: false };
+
   componentDidMount() {
-    
-
-    
+    setTimeout(this.toggle, 1000);
   }
-  render () {
-      return (
-        <div>
-          
-          <Container>
-            <h1>Hello World!</h1>
-            <AudioTest></AudioTest>          
 
+  toggle = () => this.setState({ isOpen: !this.state.isOpen });
+
+  render () {
+
+    const { isOpen } = this.state;
+      return (
+     
+        
+          <ListContainer pose={isOpen ? 'open' : 'closed'} >
+            <h1>Hello World!</h1>
+            <P>
+            <AudioTest></AudioTest>          
+            </P>
             <P>
               I'm Kevin, 
             </P>
@@ -46,10 +59,10 @@ export default class Home extends Component {
             <P>
               Also, see my tutorial if you want to make a React app similar to this one!
             </P>
-          </Container>
+          </ListContainer>
           
-    
-        </div>
+       
+       
       );
   }
 }
