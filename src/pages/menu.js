@@ -56,7 +56,7 @@ class Menu extends React.PureComponent {
     return (
      
         <Sidebar className="sidebar" pose={isOpen ? 'open' : 'closed'}>
-          <Link className="menuTitle" to="/">ktran.info</Link> 
+          <Link className="menuTitle" to="/home">ktran.info</Link> 
           <p>“That's all it took to solve problems - just sense.”</p>
           
           <Item className="menuBtn">  <Link className="menuLink" to="/work">Work Experience</Link> </Item>

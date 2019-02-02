@@ -39,12 +39,11 @@ const RouteContainer = posed.div({
                 <PoseGroup className="contentContainer">
                     <RouteContainer key={location.pathname}>
                         <Switch location={location}>
-                        <Route exact path="/" component={Home} key="home" />
-                        <Route  path="/projects" component={Projects} key="projects" />
-                        <Route  path="/work" component={Work} key="work" />
-                        <Route  path="/howTo" component={HowTo} key="howTo" />
-                        <Route path="/about" component={About} key="about" />          
-                      
+                        <Route path={process.env.PUBLIC_URL + '/home'} component={Home} key="home" />
+                        <Route  path={process.env.PUBLIC_URL + '/projects'} component={Projects} key="projects" />
+                        <Route  path={process.env.PUBLIC_URL + '/work'} component={Work} key="work" />
+                        <Route  path={process.env.PUBLIC_URL + '/howTo'} component={HowTo} key="howTo" />
+                        <Route path={process.env.PUBLIC_URL + '/about'} component={About} key="about" />          
                         </Switch>
                     </RouteContainer>
                 </PoseGroup>
