@@ -34,10 +34,11 @@
 }
 
 .sidebar {
-  width: 300px;
+  width: 20vw;
   height: 100vh;
-  background: #eee;
-  padding: 30px;
+  background: #F2E9E4;
+  padding-left: 2vw;
+  padding-right: 2vw;
   display: flex;
   flex-direction: column;
   list-style: none;

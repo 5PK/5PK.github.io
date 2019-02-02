@@ -1,0 +1,30 @@
+
+h1{
+    margin: 0;
+}
+
+
+ul.projectList{
+    
+    list-style-type: none;
+    background-color: #C9ADA7;
+    width:81vw;
+    height:100%;
+    margin: 0;
+    padding:10px 10px 0px 10px;
+
+}
+
+li.projectListTitle{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+li.projectListItem{
+    margin-left: 100px;
+}
+
+#content {
+    width:81vw;
+    height:100vh;
+  }

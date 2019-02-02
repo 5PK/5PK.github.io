@@ -1,23 +1,17 @@
 import React from 'react';
 import posed from 'react-pose';
-import { Link } from 'react-router-dom';
-import { tween } from "popmotion";
-import { popmotion } from "popmotion";
 
+import "./styles/work.css"
 
 const ListContainer = posed.ul({
   open: {
-    x: '10%',
+    y: '0%',
     delayChildren: 200,
     staggerChildren: 50
   },
-  closed: { x: '100%', delay: 500 },
+  closed: { y: '-100%', delay: 250 },
 });
-/*
-  enter: { staggerChildren: 50 },
-  exit: { staggerChildren: 20, staggerDirection: -1 }
-});
-*/
+
 
 const Item = posed.li({
   open: { y: 0, opacity: 1 },
@@ -33,6 +27,8 @@ class Work extends React.Component {
 
   componentDidMount() {
     setTimeout(this.toggle, 1000);
+
+
   }
 
   toggle = () => this.setState({ isOpen: !this.state.isOpen });
@@ -44,19 +40,23 @@ class Work extends React.Component {
 
     return (
 
-        <ListContainer pose={isOpen ? 'open' : 'closed'}>
+        <ListContainer className="workList" pose={isOpen ? 'open' : 'closed'}>
+        <Item className="workListTitle">
         <h1>My Experience</h1>
-          <Item >
+        </Item>
+        
+          <Item className="workListItem">
             <div>
               <h3  >Evenica</h3>
+              
             </div>
           </Item>
-          <Item>
+          <Item className="workListItem">
             <div>
               <h3>Bashx3</h3>
             </div>
-          </Item>
-          <Item>
+          </Item >
+          <Item className="workListItem">
             <div>
               <h3>Tomson Automotive</h3>
             </div>
