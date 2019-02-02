@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import posed from 'react-pose';
 import { Link } from 'react-router-dom';
+import "./styles/projects.css"
 
 const ListContainer = posed.ul({
   open: {
-    x: '10%',
+    y: '0%',
     delayChildren: 200,
     staggerChildren: 50
   },
-  closed: { x: '100%', delay: 500 },
+  closed: { y: '-100%', delay: 500 },
 });
 
 const Item = posed.li({
@@ -32,23 +33,22 @@ export default class Projects extends Component {
     const { isOpen } = this.state;
     return (
 
-      <ListContainer pose={isOpen ? 'open' : 'closed'}>
-        <h2>My Experience</h2>
-        <Item>
-          <Link to="/about">About</Link>
-          <p>Some generic description about the about page. About.</p>
+      <ListContainer pose={isOpen ? 'open' : 'closed'} className="projectList">
+       <Item className="projectListItem">
+       <h1>My Experience</h1>
+       </Item>
+
+        <Item className="projectListItem">
+          <p>SeizeAlert</p>
         </Item>
-        <Item>
-          <Link to="/about">About</Link>
-          <p>Some generic description about the about page. About.</p>
+        <Item className="projectListItem">
+          <p>Hold 'Em</p>
         </Item>
-        <Item>
-          <Link to="/about">About</Link>
-          <p>Some generic description about the about page. About.</p>
+        <Item className="projectListItem">
+          <p>AutoManage</p>
         </Item>
-        <Item>
-          <Link to="/about">About</Link>
-          <p>Some generic description about the about page. About.</p>
+        <Item className="projectListItem">
+          <p>Raspberry Pi</p>
         </Item>
       </ListContainer>
 

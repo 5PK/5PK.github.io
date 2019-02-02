@@ -1,37 +1,44 @@
-import React from 'react';
+import React, { Component }  from 'react';
 import posed from 'react-pose';
-import { Link } from 'react-router-dom';
+import "./styles/howTo.css"
 
 const ListContainer = posed.ul({
-  enter: { staggerChildren: 50 },
-  exit: { staggerChildren: 20, staggerDirection: -1 }
+  open: {
+    y: '0%',
+    delayChildren: 200,
+    staggerChildren: 50
+  },
+  closed: { y: '-100%', delay: 500 },
 });
 
 const Item = posed.li({
-  enter: { y: 0, opacity: 1 },
-  exit: { y: 50, opacity: 0 }
+  open: { y: 0, opacity: 1 },
+  closed: { y: 20, opacity: 0 },
 });
 
-export default () => (
-  <div>
-    <h2>My Experience</h2>
-    <ListContainer>
-      <Item>
-        <Link to="/about">About</Link>
-        <p>Some generic description about the about page. About.</p>
+export default class HowTo extends Component {
+
+
+  state = { isOpen: false };
+
+  componentDidMount() {
+    setTimeout(this.toggle, 1000);
+  }
+
+  toggle = () => this.setState({ isOpen: !this.state.isOpen });
+
+  render() {
+
+    const { isOpen } = this.state;
+    return (
+      <ListContainer pose={isOpen ? 'open' : 'closed'} className="howList">
+      <Item className="howTitle">
+      <h1>How did I make this app?</h1>
+
       </Item>
-      <Item>
-        <Link to="/about">About</Link>
-        <p>Some generic description about the about page. About.</p>
+        <Item className="howItem">
+          <p>Coming Soon!</p>
       </Item>
-      <Item>
-        <Link to="/about">About</Link>
-        <p>Some generic description about the about page. About.</p>
-      </Item>
-      <Item>
-        <Link to="/about">About</Link>
-        <p>Some generic description about the about page. About.</p>
-      </Item>
-    </ListContainer>
-  </div>
-);
+      </ListContainer>
+    )
+}};
