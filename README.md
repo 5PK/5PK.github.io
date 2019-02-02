@@ -1,4 +1,4 @@
-## My Person Website
+## My Personal Website
 
 https://5pk.github.io/portfolio/
 
