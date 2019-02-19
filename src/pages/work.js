@@ -48,17 +48,19 @@ class Work extends React.Component {
           <Item className="workListItem">
             <div>
               <h3  >Evenica</h3>
-              
+              <p>Work Description here</p>
             </div>
           </Item>
           <Item className="workListItem">
             <div>
               <h3>Bashx3</h3>
+              <p>Work Description here</p>
             </div>
           </Item >
           <Item className="workListItem">
             <div>
               <h3>Tomson Automotive</h3>
+              <p>Work Description here</p>
             </div>
           </Item>
         </ListContainer>
