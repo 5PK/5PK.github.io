@@ -21,8 +21,8 @@ import HowTo from './pages/howTo';
 
 const RouteContainer = posed.div({
   
-    enter: { opacity: 1, delay: 300, beforeChildren: true },
-    exit: { opacity: 0 }
+    enter: { opacity: 1, delay: 0, beforeChildren: true },
+    exit: { opacity: 0, y: '-100%', delay: 500 }
   });
   
   const App = () => (
@@ -31,12 +31,12 @@ const RouteContainer = posed.div({
       
         
         <div id="site-container">             
-            <div id="content-container">     
+        
                 <div id="sideBar">
                     <Menu/>
                 </div>
-                <div id="content">
-                <PoseGroup>
+                <div className="contentContainer">
+                <PoseGroup className="contentContainer">
                     <RouteContainer key={location.pathname}>
                         <Switch location={location}>
                         <Route exact path="/" component={Home} key="home" />
@@ -49,7 +49,7 @@ const RouteContainer = posed.div({
                     </RouteContainer>
                 </PoseGroup>
                 </div>
-            </div>
+     
          
         </div>
       )}

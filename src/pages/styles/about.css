@@ -1,0 +1,30 @@
+
+h1{
+    margin: 0;
+}
+
+
+ul.aboutList{
+    
+    list-style-type: none;
+    background-color: #22223B;
+    width:81vw;
+    height:100%;
+    margin: 0;
+    padding:10px 10px 0px 10px;
+
+}
+
+li.aboutListTitle{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+li.aboutListItem{
+    margin-left: 100px;
+}
+
+#content {
+    width:81vw;
+    height:100vh;
+  }

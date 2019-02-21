@@ -220,14 +220,15 @@ class Audio extends Component {
         return (
             <div className="AudioPlayer">
                 <audio id="audio-element" preload="true" src={`${song}`} crossorigin="anonymous" ></audio>
+          
+
+                <div id="test">
+                    <canvas id="testCanvas"></canvas>
+                </div>
                 <div className="controls">
                     <button onClick={this.toggleMusic}>
                         {this.state.audio ? 'Pause' : 'Play'}
                     </button>
-                </div>
-
-                <div id="test">
-                    <canvas id="testCanvas"></canvas>
                 </div>
 
             </div>

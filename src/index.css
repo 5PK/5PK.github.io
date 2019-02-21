@@ -20,28 +20,20 @@ code {
 
 #sideBar {
   float:left;
-  height: 100%; 
+  height: 100vh; 
 
 }
 
-#content {
+.contentContainer {
   float:right;
-  margin-left: 10px;
-  width:70%;
-  height:100%;
+  width:76vw;
+  height:100vh;
 }
 
-.entire-thing {
-  width: 100%;
-}
 
 #site-container {
   background: white;
+  width: 100vw;
+  height:100vh;
  
-  min-height: calc(100vh - 20px);
-}
-
-#content-container {
-  height: 100%; 
-  width: 100%;
 }
